@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='RingMyBell_RasberryPi_test_auto_ver'
