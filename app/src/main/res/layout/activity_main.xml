@@ -10,24 +10,38 @@
         android:id="@+id/button_registerBus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:background="#FF0000"
+        android:layout_marginTop="28dp"
+        android:background="#9C27B0"
         android:text="RegisterBus"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_currentStopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="정류장 이름"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_currentStop" />
 
     <TextView
         android:id="@+id/textView_currentStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:text="버스 현재위치"
         android:textColor="#A4000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_registerBus" />
 
@@ -45,9 +59,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_currentStopName" />
 
     <Button
+        android:id="@+id/button_autoStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="#03A9F4"
+        android:text="자동운행 시작"
+        app:layout_constraintEnd_toStartOf="@+id/button_autoPause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ringBell" />
+
+    <Button
         android:id="@+id/button_autoPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#03A9F4"
         android:text="자동운행 일시정지"
         app:layout_constraintBottom_toBottomOf="@+id/button_autoStart"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,37 +82,49 @@
         app:layout_constraintStart_toEndOf="@+id/button_autoStart" />
 
     <Button
-        android:id="@+id/button_autoStart"
+        android:id="@+id/button_goToNextManually"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="자동운행 시작"
-        app:layout_constraintEnd_toStartOf="@+id/button_autoPause"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_currentStopIdentifier" />
-
-    <Button
-        android:id="@+id/button_manual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
+        android:background="#4CAF50"
         android:text="수동운행  - 다음 위치로"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintEnd_toStartOf="@+id/button_reset"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_autoStart" />
 
     <TextView
-        android:id="@+id/textView_currentStopName"
+        android:id="@+id/textView_ringBell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="버스 벨 울림 여부"
+        android:textColor="#002EFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_currentStopIdentifier" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F14343"
+        android:text="처음 위치로"
+        app:layout_constraintBottom_toBottomOf="@+id/button_goToNextManually"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_goToNextManually" />
+
+    <TextView
+        android:id="@+id/textView_dataIndex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="정류장 이름"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:text="데이터 인덱스"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_currentStop" />
+        app:layout_constraintTop_toBottomOf="@+id/button_goToNextManually" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
