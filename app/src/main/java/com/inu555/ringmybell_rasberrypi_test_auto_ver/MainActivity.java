@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
     // 포트번호
     private final int port = 7777;
     // IP주소
-    //private final String ip = "13.125.8.121";
-    private final String ip = "10.0.2.2";
+    private final String ip = "13.125.8.121";
+//    private final String ip = "10.0.2.2";
 
     // Socket 객체 참조 변수
     private Socket socket;
